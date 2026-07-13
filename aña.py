@@ -25,11 +25,14 @@ def crear():
     a = random.randint (1,10)
     b = 0
     c = 0
+    pedidos =[a]
     if primer > 1:
         b = random.randint (1,10)
+        pedidos.append(b)
     if primer > 2:
         c = random.randint (1,10)
-    pedidos = [a, b, c]
+        pedidos.append(c)
+    print("Pedido creado.")
     return pedidos
 
 def leerpedido(pedido):
@@ -40,10 +43,13 @@ def leerpedido(pedido):
             vuelta = vuelta + 1
             print(pedido[vuelta], " donas de ", dona)
 
-
+def creardona (numero):
+    for dona in donas:
+        if numero == 
 
 while True:
     try:
+        print("1 = crear pedido / 2 = ver pedido/ 3 = crear donas / 4 = entregar donas")
         opcion = int(input("¿Qué harás?: "))
     except:
         print("Solo interactuar con números.")
@@ -51,6 +57,32 @@ while True:
         match opcion:
             case 1:
                 pedido = crear()
+            
+            case 2:
+                while True:
+                    try:
+                        leerpedido(pedido)
+                    except:
+                        print("No hay pedidos.")
+                        break
+                    else:
+                        break
+            
+            case 3:
+                while True:
+                    contador = 0
+                    for dona in donas: 
+                        contador = contador + 1
+                        print(contador , " = ",dona)
+                    try:
+                        opcdona = int(input("¿Que dona hará?: "))
+                    except:
+                        print("Solo interactuar con números.")
+                    else:
+                        match opcdona:
+                            case 1:
+
+
 
 
 
